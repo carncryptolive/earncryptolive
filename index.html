@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarnCryptoLive - Real-Time Crypto Market & Earning Hub</title>
+    <title>EarnCryptoLive - Real-Time Crypto Market Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Poppins', sans-serif; }
-    </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased min-h-screen">
 
     <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 py-2 px-4 text-center text-xs font-bold uppercase tracking-wider">
         <i class="fa-solid fa-circle-check animate-pulse mr-1"></i> Notice: Multi-accounting is strictly prohibited. Your account will be banned instantly!
     </div>
 
-    <header class="bg-gray-900/80 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="bg-gradient-to-r from-amber-500 to-amber-400 p-2.5 rounded-xl shadow-lg shadow-amber-500/20">
+                <div class="bg-amber-400 p-2 rounded-xl">
                     <i class="fa-solid fa-bolt text-xl text-slate-950"></i>
                 </div>
                 <div>
                     <span class="text-xl font-bold tracking-tight text-white">EarnCrypto<span class="text-amber-400">Live</span></span>
-                    <p class="text-[10px] text-gray-400 font-medium tracking-widest uppercase -mt-1">Live Market & Rewards</p>
                 </div>
             </div>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                <a href="#market" class="hover:text-amber-400 transition flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span> Live Market</a>
+                <a href="#market" class="hover:text-amber-400 transition flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500"></span> Live Market</a>
                 <a href="#earn" class="hover:text-amber-400 transition">Earn Points</a>
                 <a href="#signup" class="hover:text-amber-400 transition">Sign Up</a>
                 <a href="#reviews" class="hover:text-amber-400 transition">Ratings</a>
@@ -39,4 +34,230 @@
 
     <section class="container mx-auto px-4 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-            <h1 class="text-4xl lg:text-6xl font
+            <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                Track Live Rates & <span class="text-amber-400">Earn Crypto Rewards</span>
+            </h1>
+            <p class="mt-6 text-gray-400 text-lg leading-relaxed">
+                Monitor real-time Bitcoin prices and market fluctuations while completing micro-tasks, surveys, and watching videos. Fast cashouts directly to your wallet!
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4 text-sm font-semibold">
+                <div class="flex items-center gap-2 bg-gray-900 px-4 py-3 rounded-xl border border-gray-800">
+                    <i class="fa-solid fa-circle-check text-amber-400"></i> Real-Time Price Tickers
+                </div>
+                <div class="flex items-center gap-2 bg-gray-900 px-4 py-3 rounded-xl border border-gray-800">
+                    <i class="fa-solid fa-circle-check text-amber-400"></i> $1 Minimum Cashout
+                </div>
+            </div>
+        </div>
+
+        <div id="signup" class="bg-gray-900 border border-gray-800 rounded-3xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-bold text-white mb-2">Create Your Free Account</h3>
+            <p class="text-gray-400 text-sm mb-6">Start tracking and earning rewards within the next 5 minutes.</p>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Registration Successful (Demo Only)!');">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Username</label>
+                    <input type="text" placeholder="e.g. cryptoking" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Email Address</label>
+                    <input type="email" placeholder="name@gmail.com" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Password</label>
+                    <input type="password" placeholder="••••••••" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400" required>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg">
+                    Register Now & Claim 100 Coins
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="market" class="bg-gray-900/50 border-y border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-amber-400"></i> Real-Time Market Monitor
+                    </h2>
+                    <p class="text-sm text-gray-400 mt-1">Live global cryptocurrency prices updating automatically.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 text-xs text-gray-400 px-4 py-2 rounded-xl flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span>Live feed connected (Auto-refresh)</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase block">Bitcoin</span>
+                            <span class="text-sm font-bold text-amber-500 block">BTC</span>
+                        </div>
+                        <i class="fa-brands fa-bitcoin text-3xl text-amber-500 opacity-30"></i>
+                    </div>
+                    <span id="btc-price" class="text-2xl font-bold text-white mt-4 block">Loading...</span>
+                    <span id="btc-change" class="text-xs font-medium mt-1 inline-flex items-center gap-1 text-gray-400">Fetching...</span>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase block">Ethereum</span>
+                            <span class="text-sm font-bold text-purple-400 block">ETH</span>
+                        </div>
+                        <i class="fa-brands fa-ethereum text-3xl text-purple-400 opacity-30"></i>
+                    </div>
+                    <span id="eth-price" class="text-2xl font-bold text-white mt-4 block">Loading...</span>
+                    <span id="eth-change" class="text-xs font-medium mt-1 inline-flex items-center gap-1 text-gray-400">Fetching...</span>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase block">Litecoin</span>
+                            <span class="text-sm font-bold text-blue-400 block">LTC</span>
+                        </div>
+                        <i class="fa-solid fa-coins text-3xl text-blue-400 opacity-30"></i>
+                    </div>
+                    <span id="ltc-price" class="text-2xl font-bold text-white mt-4 block">Loading...</span>
+                    <span id="ltc-change" class="text-xs font-medium mt-1 inline-flex items-center gap-1 text-gray-400">Fetching...</span>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase block">Dogecoin</span>
+                            <span class="text-sm font-bold text-yellow-500 block">DOGE</span>
+                        </div>
+                        <i class="fa-solid fa-paw text-3xl text-yellow-500 opacity-30"></i>
+                    </div>
+                    <span id="doge-price" class="text-2xl font-bold text-white mt-4 block">Loading...</span>
+                    <span id="doge-change" class="text-xs font-medium mt-1 inline-flex items-center gap-1 text-gray-400">Fetching...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="earn" class="container mx-auto px-4 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-white">High Paying Task Walls</h2>
+            <p class="text-gray-400 mt-3">Choose from multiple methods below to maximize your daily reward potential.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                <i class="fa-solid fa-square-poll-vertical text-3xl text-amber-400 mb-4"></i>
+                <h4 class="text-lg font-bold text-white">Premium Surveys</h4>
+                <p class="text-sm text-gray-400 mt-2">Share your opinions on products and get up to 500 coins per entry.</p>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                <i class="fa-solid fa-video text-3xl text-amber-400 mb-4"></i>
+                <h4 class="text-lg font-bold text-white">Watch Videos</h4>
+                <p class="text-sm text-gray-400 mt-2">Stream interesting promotional clips and earn coins for every minute.</p>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                <i class="fa-solid fa-cubes text-3xl text-amber-400 mb-4"></i>
+                <h4 class="text-lg font-bold text-white">Offerwalls</h4>
+                <p class="text-sm text-gray-400 mt-2">Install apps, try out new android/iOS games and complete achievements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="bg-gray-900/30 border-t border-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-white">User Satisfaction & Ratings</h2>
+                <div class="flex items-center justify-center gap-1 mt-3 text-xl text-amber-400">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="text-sm font-semibold text-gray-300 ml-2">4.9 / 5.0 Global Rating</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex text-amber-400 gap-1 text-sm mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Received my $10 LiteCoin payment within an hour! Extremely fast and easy to navigate task bars."</p>
+                    <div class="mt-4 text-xs font-bold text-gray-400">- Alex M., United States</div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex text-amber-400 gap-1 text-sm mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Best platform for earning small crypto during free hours. The surveys pay much better than standard websites."</p>
+                    <div class="mt-4 text-xs font-bold text-gray-400">- Sarah K., Germany</div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="flex text-amber-400 gap-1 text-sm mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Clean design and prompt customer help desk. Highly recommend trying out the app installation offers."</p>
+                    <div class="mt-4 text-xs font-bold text-gray-400">- Rahul S., India</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+            <div>
+                <h5 class="text-lg font-bold text-white">Subscribe to Newsletter</h5>
+                <p class="text-sm text-gray-400 mt-1">Get custom high-paying promo codes and crypto tips directly to your Gmail inbox.</p>
+            </div>
+            <div>
+                <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed via Gmail successfully!');">
+                    <input type="email" placeholder="Enter your Gmail address" class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400" required>
+                    <button type="submit" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-6 rounded-xl text-sm transition shrink-0">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-gray-900 pt-6 text-center text-xs text-gray-500">
+            &copy; 2026 EarnCryptoLive. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        async function fetchCryptoPrices() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,dogecoin&vs_currencies=usd&include_24hr_change=true');
+                const data = await response.json();
+
+                updateCard('btc', data.bitcoin.usd, data.bitcoin.usd_24h_change, false);
+                updateCard('eth', data.ethereum.usd, data.ethereum.usd_24h_change, false);
+                updateCard('ltc', data.litecoin.usd, data.litecoin.usd_24h_change, false);
+                updateCard('doge', data.dogecoin.usd, data.dogecoin.usd_24h_change, true);
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function updateCard(id, price, change, isSmallDecimal) {
+            const priceEl = document.getElementById(${id}-price);
+            const changeEl = document.getElementById(${id}-change);
+            
+            if(priceEl && changeEl) {
+                if (isSmallDecimal) {
+                    priceEl.innerText = $${price.toFixed(4)};
+                } else {
+                    priceEl.innerText = $${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })};
+                }
+
+                const formattedChange = change.toFixed(2);
+                if (change >= 0) {
+                    changeEl.className = "text-xs font-medium mt-1 inline-flex items-center gap-1 text-green-400";
+                    changeEl.innerHTML = <i class="fa-solid fa-caret-up"></i> +${formattedChange}%;
+                } else {
+                    changeEl.className = "text-xs font-medium mt-1 inline-flex items-center gap-1 text-red-400";
+                    changeEl.innerHTML = <i class="fa-solid fa-caret-down"></i> ${formattedChange}%;
+                }
+            }
+        }
+
+        // Fetch immediately and loop
+        fetchCryptoPrices();
+        setInterval(fetchCryptoPrices, 10000);
+    </script>
+
+</body>
+</html>
